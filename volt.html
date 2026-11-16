@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Volt Elektrik — Elektrik tesisatı, bakım, arıza ve teknik servis hizmetleri.">
+  <title>Volt Elektrik | Güvenli Enerji, Güçlü Çözümler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#202521;--muted:#69716b;--paper:#f7f7f3;--yellow:#e8bd45;--line:#e3e5df}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1160px,88%);margin:auto}
+    .topbar{background:var(--ink);color:#d8dbd4;font-size:12px;padding:10px 0}
+    .topbar .wrap{display:flex;justify-content:space-between;gap:16px}
+    header{height:82px;display:flex;align-items:center;border-bottom:1px solid var(--line);background:#fff}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{font:800 25px Manrope,sans-serif;letter-spacing:-1.5px}
+    .brand span{color:#c89a22}
+    .links{display:flex;align-items:center;gap:34px;font-size:13px;color:#4d554f}
+    .nav-cta,.btn{background:var(--yellow);padding:14px 20px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:18px}
+    .hero{background:var(--paper);min-height:570px;display:grid;align-items:center;overflow:hidden}
+    .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:76px 0}
+    .eyebrow{font-size:10px;letter-spacing:2.2px;font-weight:700;color:#7c8178}
+    h1,h2,h3{font-family:Manrope,sans-serif}
+    h1{font-size:clamp(46px,6vw,76px);line-height:1.02;letter-spacing:-4px;margin:23px 0}
+    h1 em{font-style:normal;color:#c99d2d}
+    .hero p{max-width:470px;color:var(--muted);font-size:15px;line-height:1.9}
+    .hero-actions{display:flex;align-items:center;gap:24px;margin-top:32px}
+    .text-link{font-size:12px;font-weight:700;border-bottom:1px solid #9ca19a;padding-bottom:5px}
+    .hero-art{height:390px;background:#252b26;position:relative;display:grid;place-items:center;overflow:hidden}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(232,189,69,.35);border-radius:50%;width:310px;height:310px}
+    .hero-art:after{width:390px;height:390px}
+    .bolt{font-size:220px;color:var(--yellow);line-height:1;z-index:1;text-shadow:0 18px 50px #0005}
+    .art-label{position:absolute;right:24px;bottom:24px;background:#f7f7f3;padding:14px 18px;font-size:10px;font-weight:700;letter-spacing:1px;line-height:1.6;z-index:2}
+    .trust{padding:27px 0;border-bottom:1px solid var(--line)}
+    .trust .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#737a73;font-size:11px;letter-spacing:.8px}
+    section.content{padding:100px 0}
+    .section-head{max-width:620px;margin-bottom:48px}
+    .section-head h2{font-size:clamp(32px,4vw,48px);letter-spacing:-2px;margin:15px 0}
+    .section-head p{color:var(--muted);line-height:1.8;font-size:14px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .service{padding:30px;min-height:220px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .service .num{font-size:11px;color:#a27c1d}
+    .service h3{font-size:19px;margin:34px 0 12px}
+    .service p{font-size:13px;color:var(--muted);line-height:1.8}
+    .band{background:var(--ink);color:#f7f7f3;padding:75px 0}
+    .band .wrap{display:flex;align-items:center;justify-content:space-between;gap:35px}
+    .band h2{font-size:clamp(28px,4vw,43px);letter-spacing:-1.8px;max-width:650px}
+    .band p{color:#b9beb7;font-size:13px;margin-top:13px}
+    .contact{background:var(--paper)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+    .contact h2{font-size:45px;letter-spacing:-2px;margin:15px 0}
+    .contact p{color:var(--muted);line-height:1.8;font-size:14px}
+    .contact-details{display:grid;gap:20px}
+    .detail{padding-bottom:18px;border-bottom:1px solid var(--line)}
+    .detail small{display:block;color:#858b83;font-size:10px;letter-spacing:1px;margin-bottom:7px}
+    .detail strong{font-size:15px}
+    footer{background:#202521;color:#b9beb7;padding:28px 0;font-size:11px}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px}
+    .back{position:fixed;right:20px;bottom:20px;background:#fff;border:1px solid var(--line);padding:12px 16px;font-size:11px;font-weight:700;box-shadow:0 5px 24px #0001;z-index:5}
+    @media(max-width:760px){
+      .topbar .wrap{font-size:10px}.links{gap:13px}.links a:not(.nav-cta){display:none}
+      header{height:70px}.hero-inner{grid-template-columns:1fr;gap:35px;padding:65px 0}
+      h1{font-size:55px}.hero-art{height:300px}.bolt{font-size:170px}
+      .services{grid-template-columns:1fr}.service{min-height:180px}
+      section.content{padding:72px 0}.band .wrap{align-items:flex-start;flex-direction:column}
+      .contact-grid{grid-template-columns:1fr;gap:35px}.contact h2{font-size:38px}
+      footer .wrap{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>Elektrik işlerinizde güvenilir çözüm ortağınız</span><span>7 gün · 24 saat destek</span></div></div>
+  <header><nav class="wrap">
+    <a class="brand" href="#">VOLT<span>.</span></a>
+    <div class="links"><a href="#hakkimizda">Hakkımızda</a><a href="#hizmetler">Hizmetlerimiz</a><a href="#iletisim">İletişim</a><a class="nav-cta" href="#iletisim">Teklif Alın ↗</a></div>
+  </nav></header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div><span class="eyebrow">GÜVENİLİR ELEKTRİK ÇÖZÜMLERİ</span>
+          <h1>Güvenli enerji.<br><em>Güçlü çözümler.</em></h1>
+          <p>Yaşam ve çalışma alanlarınız için profesyonel elektrik tesisatı, bakım ve teknik servis hizmetleri sunuyoruz.</p>
+          <div class="hero-actions"><a class="btn" href="#hizmetler">Hizmetlerimizi İnceleyin ↗</a><a class="text-link" href="#iletisim">Bize Ulaşın</a></div>
+        </div>
+        <div class="hero-art"><div class="bolt">ϟ</div><div class="art-label">KESİNTİSİZ DESTEK<br>GÜVENLİ UYGULAMA</div></div>
+      </div>
+    </section>
+    <div class="trust"><div class="wrap"><span>PROFESYONEL EKİP</span><span>GÜVENLİ UYGULAMA</span><span>ŞEFFAF FİYATLANDIRMA</span><span>ÇÖZÜM ODAKLI HİZMET</span></div></div>
+    <section class="content" id="hakkimizda"><div class="wrap">
+      <div class="section-head"><span class="eyebrow">VOLT ELEKTRİK HAKKINDA</span><h2>Her bağlantıda güven, her projede kalite.</h2><p>Elektrik ihtiyaçlarınıza doğru planlama ve titiz uygulamayla yaklaşıyoruz. Küçük ölçekli tamiratlardan kapsamlı tesisat projelerine kadar yanınızdayız.</p></div>
+    </div></section>
+    <section class="content" id="hizmetler" style="background:#fafaf8"><div class="wrap">
+      <div class="section-head"><span class="eyebrow">NELER YAPIYORUZ?</span><h2>İhtiyacınıza uygun elektrik hizmetleri.</h2><p>Projenizin her aşamasında güvenilir, düzenli ve profesyonel destek.</p></div>
+      <div class="services">
+        <article class="service"><span class="num">01 / TESİSAT</span><h3>Elektrik Tesisatı</h3><p>Yeni yapı ve yenileme projeleri için planlı elektrik tesisatı çözümleri.</p></article>
+        <article class="service"><span class="num">02 / BAKIM</span><h3>Bakım & Onarım</h3><p>Elektrik sistemlerinizin kontrolü, arıza tespiti ve onarım hizmetleri.</p></article>
+        <article class="service"><span class="num">03 / AYDINLATMA</span><h3>Aydınlatma Sistemleri</h3><p>İç ve dış mekânlar için işlevsel ve estetik aydınlatma uygulamaları.</p></article>
+        <article class="service"><span class="num">04 / PANO</span><h3>Pano & Kablo İşleri</h3><p>Elektrik panosu kurulumu, düzenleme ve kablolama çalışmaları.</p></article>
+        <article class="service"><span class="num">05 / ARIZA</span><h3>Arıza Tespiti</h3><p>Elektrik sorunlarının güvenli biçimde incelenmesi ve çözüm planı.</p></article>
+        <article class="service"><span class="num">06 / DANIŞMANLIK</span><h3>Teknik Danışmanlık</h3><p>İhtiyacınıza uygun sistem ve uygulama konusunda teknik yönlendirme.</p></article>
+      </div>
+    </div></section>
+    <section class="band"><div class="wrap"><div><h2>Elektrik işleriniz için doğru çözümü birlikte bulalım.</h2><p>Projenizi anlatın, size uygun hizmeti planlayalım.</p></div><a class="btn" href="#iletisim">İletişime Geçin ↗</a></div></section>
+    <section class="content contact" id="iletisim"><div class="wrap contact-grid">
+      <div><span class="eyebrow">BİZE ULAŞIN</span><h2>Projeniz için görüşelim.</h2><p>İhtiyacınızı paylaşın, size en kısa sürede dönüş yapalım.</p></div>
+      <div class="contact-details"><div class="detail"><small>TELEFON</small><strong>+90 (5XX) XXX XX XX</strong></div><div class="detail"><small>E-POSTA</small><strong>info@voltelektrik.com</strong></div><div class="detail"><small>HİZMET BÖLGESİ</small><strong>Ankara ve çevresi</strong></div></div>
+    </div></section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 VOLT ELEKTRİK · Konsept çalışma</span><span>Güvenli enerji, güçlü çözümler.</span></div></footer>
+  <a class="back" href="index.html">← HAYDESIGN'a dön</a>
+</body>
+</html>

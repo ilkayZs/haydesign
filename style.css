@@ -42,3 +42,9 @@
   .electric-bottom{font-size:5px;letter-spacing:.7px;bottom:13px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Clickable project preview */
+.project-clickable{display:block;color:inherit;text-decoration:none;cursor:pointer}
+.project-clickable .project-meta{color:inherit}
+.project-clickable:hover .project-link{transform:translate(3px,-3px)}
+.project-clickable .project-link{transition:transform .2s ease}
